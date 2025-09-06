@@ -62,9 +62,9 @@ const featuredProducts = [
 
 export function FeaturedProducts() {
   return (
-    <section className="py-12">
+    <section className="py-12 px-20">
       <div className="flex justify-between items-center mb-8">
-        <h2 className="text-2xl font-bold text-gray-900">
+        <h2 className="text-xl font-bold text-gray-900 border-b-2 border-blue-600 pb-2">
           Grab the best deal on <span className="text-blue-600">Smartphones</span>
         </h2>
         <Link href="/categories/smartphones" className="text-blue-600 hover:text-blue-700 font-medium">

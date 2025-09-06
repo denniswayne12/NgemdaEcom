@@ -15,6 +15,7 @@ export function HeroSection() {
       cta2: "View Deals",
       link1: "/categories/smartwatches",
       link2: "/deals",
+      backgraund: "rgb(252, 203, 28)",
       image: "/images/banners/banner_2.jpg" // Full hero image
     },
     {
@@ -22,6 +23,7 @@ export function HeroSection() {
       cta2: "View Deals",
       link1: "/categories/headphones",
       link2: "/deals",
+      backgraund: "#f1f1f1",
       image: "/images/banners/banner_4.jpg" // Full hero image
     },
     {
@@ -29,6 +31,7 @@ export function HeroSection() {
       cta2: "View Deals",
       link1: "/categories/smartphones",
       link2: "/deals",
+      backgraund: "rgb(62, 55, 61)",
       image: "/images/banners/banner_6.jpg" // Full hero image
     }
   ];
@@ -69,10 +72,10 @@ export function HeroSection() {
             className="w-full flex-shrink-0 relative"
           >
             {/* Full background image */}
-            <div className="absolute inset-0 z-0">
-              <Image src={slide.image} alt={`Hero slide ${index + 1}`} fill className="object-cover h-60" priority={index === 0} />
-              {/* Dark overlay for better text visibility */}
-              <div className="absolute inset-0 bg-black/40"></div>
+            <div className="absolute inset-0 z-0" style={{ background: slide.backgraund }}>
+              <Image src={slide.image} alt={`Hero slide ${index + 1}`} fill className="object-contain ml-40" priority={index === 0} />
+              
+               <div className="absolute inset-0 bg-black/40"></div> 
             </div>
             
             {/* Content - Only buttons */}
@@ -93,6 +96,7 @@ export function HeroSection() {
                 </Link>
               </div>
             </div>
+            
           </div>
         ))}
       </div>

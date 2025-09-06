@@ -1,12 +1,16 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
+import Image from "next/image";
 import { useRouter } from 'next/navigation';
 import { supabase } from '../lib/supabase/supabaseClient';
 import {Header} from '../components/layout/header';
 import {Footer} from '../components/layout/footer';
 import {HeroSection} from '../components/home/hero-section';
 import {BrandShowcase} from '../components/home/brand-showcase';
+import {CategoryGrid} from '../components/home/category-grid';
+import {FeaturedProducts} from '../components/home/featured-products';
+import {DailyEssentials} from '../components/home/daily-essentials';
 
 export default function DashboardPage() {
   const [user, setUser] = useState(null);
@@ -59,6 +63,12 @@ export default function DashboardPage() {
       <Header />
       <HeroSection /> 
       {/* <BrandShowcase />  */}
+      <CategoryGrid />
+      <FeaturedProducts />
+      
+      <DailyEssentials />
+     
+      
       <Footer />
     </section>
   );
