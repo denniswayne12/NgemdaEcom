@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { supabase } from '../../lib/supabase/supabaseClient';
+import { supabase } from '@/lib/supabase/supabaseClient';
 
 export default function SettingsPage() {
   const [user, setUser] = useState(null);
