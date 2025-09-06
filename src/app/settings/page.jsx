@@ -1,5 +1,5 @@
 'use client';
-import SettingsPage from "../../../screens/settingsScreen";
+import SettingsPage from "../../screens/settingsScreen";
 export default function Page() {
   
   return (
